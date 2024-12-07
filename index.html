@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krampus - Play the Exciting Horror Adventure Game | KRAMPUS.TOP</title>
+    <meta name="description" content="Play Krampus, an exciting horror adventure game where you help Krampus hunt down naughty children. Experience the thrill of this unique Christmas-themed horror game now!">
+    <link rel="canonical" href="https://krampus.top/"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #fff;
+            background-color: #1a1a1a;
+            padding-top: 60px;
+        }
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./img/home-header1-big.jpg') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            color: #fff;
+        }
+        .logo {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #ff0000;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #ff4444;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #ff0000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #cc0000;
+        }
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        section {
+            padding: 2.5rem 0;
+            position: relative;
+            scroll-margin-top: 80px;
+        }
+
+        section:nth-child(odd) {
+            background-color: #1a1a1a;
+        }
+
+        section:nth-child(even) {
+            background-color: #222;
+        }
+
+        .section-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            color: #ff4444;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #ff4444, transparent);
+        }
+
+        .content-block {
+            background-color: rgba(42, 42, 42, 0.6);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        ul, ol {
+            padding-left: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 0.8rem;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        dt {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        dd {
+            margin-bottom: 1rem;
+            margin-left: 1rem;
+        }
+
+        dd:last-child {
+            margin-bottom: 0;
+        }
+        .game-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+        .game-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .section {
+            background-color: #2a2a2a;
+            border-left: 5px solid #ff0000;
+            padding-left: 2rem;
+        }
+        .section ul {
+            list-style-type: none;
+            padding-left: 1rem;
+            color: #fff;
+        }
+        .section li {
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+        .section li:before {
+            content: "•";
+            color: #ff0000;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        #how-to-play ol {
+            padding-left: 2rem;
+            color: #fff;
+        }
+        #how-to-play li {
+            margin-bottom: 1rem;
+        }
+        #game-features table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            color: #fff;
+        }
+        #game-features th, #game-features td {
+            border: 1px solid #444;
+            padding: 0.5rem;
+            text-align: left;
+        }
+        #game-features th {
+            background-color: #3a3a3a;
+        }
+        #tips-and-tricks ul, #community-spotlight ul {
+            padding-left: 1.5rem;
+            color: #fff;
+        }
+        #faq dt {
+            font-weight: bold;
+            margin-top: 1rem;
+            color: #ff4444;
+        }
+        #faq dd {
+            margin-left: 1rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        footer {
+            background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('./img/home-header1-big.jpg') no-repeat center center/cover;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        footer p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+            color: #999;
+        }
+        footer .social-links {
+            margin: 1rem 0;
+        }
+        footer .social-links a {
+            color: #fff;
+            margin: 0 1rem;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer .social-links a:hover {
+            color: #ff0000;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            margin: 2rem 0;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        .nav-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(26, 26, 26, 0.95);
+            z-index: 1000;
+            padding: 0.5rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .nav-logo span {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #ff0000;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            margin-left: auto;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+        
+        nav a:hover {
+            color: #ff0000;
+            background-color: rgba(255,0,0,0.1);
+        }
+
+        /* 移动端响应式 */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.5rem;
+            }
+            
+            nav a {
+                font-size: 0.9rem;
+                padding: 0.3rem 0.6rem;
+            }
+
+            .nav-logo span {
+                font-size: 1.1rem;
+            }
+        }
+        /* 平滑滚动 */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* 锚点目标位置偏移，考虑固定导航栏高度 */
+        :target {
+            scroll-margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <nav>
+            <a href="#" class="nav-logo">
+                <span>KRAMPUS</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#play">Play</a></li>
+                <li><a href="#about-krampus">About</a></li>
+                <li><a href="#game-features">Features</a></li>
+                <li><a href="#how-to-play">How to Play</a></li>
+                <li><a href="#lore">Legend</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#gameplay">Gameplay</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <header>
+        <h1 class="logo">Krampus</h1>
+        <h2 class="tagline">A Terrifying Christmas Adventure</h2>
+        <a href="#play" class="cta-button">Play Now</a>
+    </header>
+
+    <main>
+        <section class="section" id="introduction">
+            <div class="section-content">
+                <h2>Welcome to Krampus</h2>
+                <div class="content-block">
+                    <p>Step into the dark side of Christmas with Krampus, an atmospheric horror adventure game that brings the ancient Alpine folklore to life. As Krampus, the Christmas demon, you'll hunt down naughty children and deliver your own brand of holiday justice.</p>
+                    <p>Whether you're a fan of horror games or simply looking for a unique Christmas-themed adventure, Krampus offers an immersive experience that will keep you on the edge of your seat.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="play">
+            <div class="section-content">
+                <h2>Play Krampus</h2>
+                <div class="content-block">
+                    <div class="game-container">
+                        <iframe src="https://www.crazygames.com/embed/krampus" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="about-krampus">
+            <div class="section-content">
+                <h2>About Krampus</h2>
+                <div class="content-block">
+                    <p>Krampus is based on the terrifying Christmas demon from Alpine folklore. In tradition, while Saint Nicholas rewards good children with gifts, Krampus punishes those who have misbehaved. This game brings this dark legend to life in an exciting and atmospheric adventure.</p>
+                    <p>Key aspects of Krampus include:</p>
+                    <ul>
+                        <li>Immersive horror gameplay set in a Christmas theme</li>
+                        <li>Atmospheric environments inspired by Alpine villages</li>
+                        <li>Unique blend of stealth and action mechanics</li>
+                        <li>Rich storytelling based on authentic folklore</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="game-features">
+            <div class="section-content">
+                <h2>Game Features</h2>
+                <div class="content-block">
+                    <table>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>Gameplay Style</td>
+                            <td>Horror Adventure</td>
+                        </tr>
+                        <tr>
+                            <td>Setting</td>
+                            <td>Dark Christmas, Alpine Village</td>
+                        </tr>
+                        <tr>
+                            <td>Main Character</td>
+                            <td>Krampus (Christmas Demon)</td>
+                        </tr>
+                        <tr>
+                            <td>Key Mechanics</td>
+                            <td>Stealth, Hunting, Puzzle-solving</td>
+                        </tr>
+                        <tr>
+                            <td>Graphics</td>
+                            <td>Atmospheric 2D Art</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="how-to-play">
+            <div class="section-content">
+                <h2>How to Play Krampus</h2>
+                <div class="content-block">
+                    <ol>
+                        <li>Movement Controls:
+                            <ul>
+                                <li>Use Arrow keys or WASD to move</li>
+                                <li>Press Spacebar to jump</li>
+                                <li>Use Mouse to interact with objects</li>
+                            </ul>
+                        </li>
+                        <li>Game Objectives:
+                            <ul>
+                                <li>Hunt down naughty children</li>
+                                <li>Navigate through the village</li>
+                                <li>Solve environmental puzzles</li>
+                                <li>Avoid detection when necessary</li>
+                            </ul>
+                        </li>
+                        <li>Tips for Success:
+                            <ul>
+                                <li>Use the shadows to your advantage</li>
+                                <li>Listen for audio cues</li>
+                                <li>Explore thoroughly for hidden items</li>
+                                <li>Time your movements carefully</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="tips-and-tricks">
+            <div class="section-content">
+                <h2>Tips and Tricks for Krampus Masters</h2>
+                <div class="content-block">
+                    <ul>
+                        <li>Master the art of stealth: Learn to move silently and use shadows effectively</li>
+                        <li>Explore thoroughly: Many useful items are hidden in less obvious places</li>
+                        <li>Learn enemy patterns: Understanding NPC behaviors is key to success</li>
+                        <li>Use your abilities wisely: Time your special abilities for maximum effect</li>
+                        <li>Pay attention to the environment: The surroundings often hold clues to puzzles</li>
+                        <li>Manage your resources: Some items are limited, use them strategically</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="lore">
+            <div class="section-content">
+                <h2>The Legend of Krampus</h2>
+                <div class="content-block">
+                    <p>Krampus originates from Alpine folklore, particularly in regions of Austria, Bavaria, Croatia, and other Central European areas. This fearsome creature is said to be the counterpart to Saint Nicholas, punishing children who have misbehaved throughout the year.</p>
+                    <p>Traditional characteristics of Krampus include:</p>
+                    <ul>
+                        <li>Half-goat, half-demon appearance</li>
+                        <li>Carries chains and bells</li>
+                        <li>Appears on Krampusnacht (December 5th)</li>
+                        <li>Known for taking naughty children away in his sack</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="section-content">
+                <h2>Frequently Asked Questions</h2>
+                <div class="content-block">
+                    <dl>
+                        <dt>Is Krampus suitable for children?</dt>
+                        <dd>Due to its horror elements and dark themes, Krampus is recommended for mature audiences.</dd>
+                        
+                        <dt>Can I play Krampus on mobile devices?</dt>
+                        <dd>Yes, Krampus is playable on both desktop and mobile devices through our website.</dd>
+                        
+                        <dt>Is there a multiplayer mode?</dt>
+                        <dd>Currently, Krampus is a single-player experience focused on atmospheric horror adventure.</dd>
+                        
+                        <dt>Are there different difficulty levels?</dt>
+                        <dd>The game maintains a consistent challenge level designed to be accessible while remaining engaging.</dd>
+                        
+                        <dt>How long is the gameplay?</dt>
+                        <dd>A typical playthrough can take 1-2 hours, with additional time for finding all secrets and completing optional challenges.</dd>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="get-started">
+            <div class="section-content">
+                <h2>Ready to Experience the Horror?</h2>
+                <div class="content-block">
+                    <p>Dive into the dark world of Krampus and experience a Christmas story like no other. No download required - play instantly in your browser!</p>
+                    <a href="#play" class="cta-button">Start Playing Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="gameplay">
+            <div class="section-content">
+                <h2>Krampus Gameplay</h2>
+                <div class="content-block">
+                    <div class="video-container">
+                        <iframe 
+                            width="100%" 
+                            height="100%" 
+                            src="https://www.youtube.com/embed/zq9ezmGlnYY" 
+                            title="Krampus Gameplay"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 KRAMPUS.TOP - All Rights Reserved</p>
+        <p>Krampus is a game based on Alpine folklore. All rights to their respective owners.</p>
+    </footer>
+
+    <div style="display:none">
+        <script defer data-domain="krampus.top" src="https://click.pageview.click/js/script.js"></script>
+    </div>
+</body>
+</html>
